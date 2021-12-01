@@ -1,7 +1,3 @@
-<?php
-  session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,30 +39,16 @@
         }
         else {
           $link = mysqli_connect ($server, $user, $pass, $basededatos);
-          $sql2="SELECT contraseña FROM Usuarios WHERE email='$email'";
-          $result=null;
-          $result = mysqli_query($link,$sql2);
-          if (mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_assoc($result);
-            $encriptada=$row['contraseña'];
-          }
-          $desencriptada = crypt($password,$encriptada);
-          $sql1="SELECT * FROM Usuarios WHERE email='$email' AND contraseña='$desencriptada'";
+          $desencriptada = crypt($password,'encriptador');
+          $sql1="SELECT * FROM UserSar WHERE email='$email' AND contraseña='$desencriptada'";
           $result=null;
           $result = mysqli_query($link,$sql1);
           mysqli_close($link);
           if(mysqli_num_rows($result) > 0) {
             $usuario=mysqli_fetch_assoc($result);
             $_SESSION['sesion']=$email;
+            header('Location:Layout.php');
 
-            $_SESSION['tipo']=$usuario['tipo'];
-
-            echo" 
-            <script languaje='javascript'> 
-              alert('Bienvenido $email');
-              location.href='Layout.php';
-            </script>
-            ";
           }
           else{
             echo ("Par&aacute;metros de login incorrectos ");

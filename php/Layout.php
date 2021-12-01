@@ -8,7 +8,7 @@
   <section class="main" id="s1">
     <div>
 
-      <h2>Quiz: el juego de las preguntas</h2>
+      <h2>Tienda</h2>
       
     </div>
   </section>

@@ -4,7 +4,7 @@ if ($local==1){
     $server="localhost";
     $user="root";
     $pass="";
-    $basededatos="db_G14";
+    $basededatos="sar";
 }
 else{
     $server="localhost:3306";
