@@ -10,7 +10,7 @@
     <div>
     <form id='signUp' name='signUp' method='POST' enctype="multipart/form-data" action="MeterUsuario.php">
         <label for="email">Email*:</label> 
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" require><br>
         <label for="nombre">Nombre*:</label> 
         <input type="text" id="nombre" name="nombre" ><br> 
         <label for="password1">Contraseña*:</label> 
@@ -18,7 +18,7 @@
         <label for="password2">Repetir contraseña*:</label> 
         <input type="password" id="password2" name="password2" ><br>
         <label for="foto">Foto</label>
-        <input type="file" accept="image/*" name="foto" onchange='loadFile(event)'><br>
+        <input type="file" accept="image/*" name="foto" onchange='loadFile(event)'<br>
       <input type="submit" id="enviar" name="enviar"><br>
     </form>
       <script>

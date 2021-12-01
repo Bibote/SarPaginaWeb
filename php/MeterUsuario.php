@@ -22,8 +22,10 @@
           $encriptada = crypt($password1,'encriptador');
           $password2 = $_POST['password2'];
           $foto=null;
+          if ($_FILES['foto']['tmp_name']!='') {
+            $foto =addslashes(file_get_contents($_FILES['foto']['tmp_name']));
+          }
 
-          $foto =addslashes(file_get_contents($_FILES['foto']['tmp_name']));
           
           if ($post) {  
            $nombre = $_POST['nombre'];

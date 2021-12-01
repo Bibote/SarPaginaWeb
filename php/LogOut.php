@@ -1,7 +1,6 @@
 <?php
 session_start();
-unset($_SESSION['sesion']);
-unset($_SESSION['tipo']);
+unset($_SESSION['nombre']);
 session_destroy();
 
 ?>

@@ -4,8 +4,8 @@
   $tipo='';
 
   echo "<div id='page-wrap'>";
-  if (isset($_SESSION['sesion'])){
-    $usuario=($_SESSION['sesion']);
+  if (isset($_SESSION['nombre'])){
+    $usuario=($_SESSION['nombre']);
     $conn = mysqli_connect($server, $user, $pass, $basededatos);
 
     if (!$conn){
@@ -26,8 +26,9 @@
     
   }
   
-  echo "<header class='main' id='h1'>";
-      if (!isset($_SESSION['sesion'])){
+  echo "<header class='main' id='h1'>
+  <h1 style='color:#000000' align='left' display:inline;>Tiendª<img style='width:7%;height:7%' src='../images/logo.png'></img></h1>";
+      if (!isset($_SESSION['nombre'])){
         echo "<span class='right' style=display:inline><a href='Registro.php'>Registro</a></span>
         <span class='right' style=display:inline><a href='LogIn.php'>Login</a></span>
 
@@ -38,13 +39,12 @@
       </nav>";
       }else{
         echo "
-        <span class='right' style=display:inline ><h1 style='color:#000000' align='left' display:inline;>Tiendª<img style='width:7%;height:7%' src='../images/logo.png'></img></h1></span>
         <span class='right' style=display:inline ><a>$usuario</a></span>
         <img src='$foto' height='100' width='100' style=display:inline;/>
         <span class='right' style=display:inline;><a href='LogOut.php'>Logout</a></span>
         </header>
       <nav class='main' id='n1' role='navigation'>
-        <span><a href='Layout.php'>hola</a></span>
+        <span><a href='VerPedidos.php'>Ver Pedidos</a></span>
 
       </nav>";
 

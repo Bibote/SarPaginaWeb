@@ -46,7 +46,7 @@
           mysqli_close($link);
           if(mysqli_num_rows($result) > 0) {
             $usuario=mysqli_fetch_assoc($result);
-            $_SESSION['sesion']=$email;
+            $_SESSION['nombre']=$email;
             header('Location:Layout.php');
 
           }

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Pedidos>
+	<Pedido nombre="millan.saez@gmail.com" juego="Ajedrez2">
+		<Genero>Lucha</Genero>
+		<Precio>50€</Precio>
+		<Fecha>25/2/9532</Fecha>
+	</Pedido>
+	<Pedido nombre="otro@gmail.com" juego="ajedrez3">
+		<Genero>historia</Genero>
+		<Precio>gratis</Precio>
+		<Fecha>12/5/4545</Fecha>
+	</Pedido>
+</Pedidos>
