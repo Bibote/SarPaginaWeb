@@ -45,6 +45,7 @@
         </header>
       <nav class='main' id='n1' role='navigation'>
         <span><a href='VerPedidos.php'>Ver Pedidos</a></span>
+        <span><a href='Ajedrez2.php'>Ajedrez</a></span>
 
       </nav>";
 

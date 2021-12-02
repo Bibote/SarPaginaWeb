@@ -20,6 +20,7 @@ $xml = simplexml_load_file('../xml/Pedidos.xml');
       <td>Genero</td>
       <td>Precio</td>
       <td>Fecha</td>
+      <td>Foto</td>
     </tr>
 <?php
 foreach($xml->children() as $pedidos){
@@ -35,6 +36,9 @@ foreach($xml->children() as $pedidos){
         if ($child->getName()=='Fecha'){
             $fecha=$child;
         }
+        if ($child->getName()=='Foto'){
+            $fotojuego=$child;
+        }
     }
         
     ?>
@@ -43,6 +47,7 @@ foreach($xml->children() as $pedidos){
     <td><?php echo $genero;?></td> 
     <td><?php echo $precio;?></td>
     <td><?php echo $fecha;?></td>
+    <td><?php echo "<img src='$fotojuego' height='200' width='200'/>";?></td>
 
 </tr>
 <?php 

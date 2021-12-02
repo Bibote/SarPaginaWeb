@@ -1,20 +1,21 @@
 <?php
 session_start();
+print_r($_GET['juego']);
 $xml = simplexml_load_file('../xml/Pedidos.xml');
       $pedidos = $xml->addChild('Pedido');
       $pedidos->addAttribute('nombre',$_SESSION['nombre']);
-      $pedidos->addAttribute('juego','ajedrez3');
+      $pedidos->addAttribute('juego',$_GET['juego']);
 
-      $pedidos->addChild('Genero','historia');
+      $pedidos->addChild('Genero',$_GET['genero']);
 
-      $pedidos->addChild('Precio','gratis');
+      $pedidos->addChild('Precio',$_GET['precio']);
 
-      $pedidos->addChild('Fecha','12/5/4545');
+      $pedidos->addChild('Fecha',date("d/m/Y"));
       
-
-
+      $pedidos->addChild('Foto',$_GET['fotojuego']);
+      
       echo $xml->asXML('../xml/Pedidos.xml');
 
-      header('Location:Layout.php');
+      header('Location:VerPedidos.php');
 
 ?>
