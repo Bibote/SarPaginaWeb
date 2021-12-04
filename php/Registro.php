@@ -38,7 +38,6 @@
     
   </section>
   <script src="../js/ClientEnrollment.js"></script>
-  <?php include '../html/Footer.html' ?>
   
 
 </body>

@@ -60,7 +60,7 @@
     </div>
   </section>
   <script src="../js/Increase.js"></script>
-  <?php include '../html/Footer.html' ?>
+
 
 
 </body>

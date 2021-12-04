@@ -13,9 +13,11 @@ nav span             				{ margin: 0px 5px 0px 0px;
 						width: 100%;
 						display: inline-block;}
 #receta-table {
-	overflow-x:scroll;
+	overflow-y:scroll;
+	table-layout: auto;
+	overflow-x: hidden;
 	width:auto;
-	height:500px;
+	height:700px;
 	border:'2'; 
 }
 

@@ -9,15 +9,15 @@
   <?php
 $_GET['min'];
 $_GET['max'];
-$datos = json_decode( file_get_contents('https://api.spoonacular.com/recipes/findByNutrients?apiKey=d61109831e434037a44efd6725f86fb1&maxCalories='.$_POST['max'].'&minCalories='.$_POST['min'].'&number=5'), true );
+$datos = json_decode( file_get_contents('https://api.spoonacular.com/recipes/findByNutrients?apiKey=d61109831e434037a44efd6725f86fb1&maxCalories='.$_POST['max'].'&minCalories='.$_POST['min'].'&number=3'), true );
       if(($datos['status'])=='failure') {
         print_r("No disponible");
               
       }
       else {
  
-        echo "<h3>Tabla comida</h3><br>
-        <center><table id='tablas' bgcolor:'AFEEEE'>
+        echo "
+        <center><table bgcolor='AFEEEE' border='2'>
         <tr>
           <td>Nombre de la receta</td>
           <td>Calorias</td>
@@ -58,7 +58,7 @@ $datos = json_decode( file_get_contents('https://api.spoonacular.com/recipes/fin
       echo "<div id='result'>";
 ?>
   </section>
-  <?php include '../html/Footer.html' ?>
+
   <script src="../js/guardarAjax.js"></script>
 </body>
 </html>

@@ -14,7 +14,6 @@
     <input type="button" id="verPreguntas" value="verPreguntas" onclick="verLocalizacion()">
     <div id='verTabla'>
   </section>
-  <?php include '../html/Footer.html' ?>
   <script src="../js/ViewQuestionsAjax.js"></script>
 </body>
 </html>

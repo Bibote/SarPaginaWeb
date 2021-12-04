@@ -8,10 +8,9 @@
   <section class="main" id="s1">
     <div>
 
-      <h2>Tienda</h2>
+      <h2>Recetalandia</h2>
       
     </div>
   </section>
-  <?php include '../html/Footer.html' ?>
 </body>
 </html>

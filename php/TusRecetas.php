@@ -14,7 +14,7 @@
 $xml = simplexml_load_file('../xml/Recetas.xml');
 ?>
 <div id=receta-table>
- <center><table style="overflow-y:auto; height: 500px;" bgcolor='AFEEEE' border='2'>
+ <center><table bgcolor='AFEEEE' border='2'>
     <tr>
         <td>Nombre de la receta</td>
         <td>Calorias</td>
@@ -66,6 +66,5 @@ foreach($xml->children() as $pedidos){
 </div id=receta-table>
 </div>
 </section>
-<?php include '../html/Footer.html' ?>
 </body>
 </html>
