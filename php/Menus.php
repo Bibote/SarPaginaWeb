@@ -44,8 +44,8 @@
         <span class='right' style=display:inline;><a href='LogOut.php'>Logout</a></span>
         </header>
       <nav class='main' id='n1' role='navigation'>
-        <span><a href='VerPedidos.php'>Ver Pedidos</a></span>
-        <span><a href='Ajedrez2.php'>Ajedrez</a></span>
+        <span><a href='TusRecetas.php'>Ver Recetas Guardadas</a></span>
+        <span><a href='ElegirCal.php'>Buscar Receta</a></span>
 
       </nav>";
 

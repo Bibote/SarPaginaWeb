@@ -12,5 +12,11 @@ footer					{background: rgb(202, 202, 202); text-align: center;}
 nav span             				{ margin: 0px 5px 0px 0px;
 						width: 100%;
 						display: inline-block;}
+#receta-table {
+	overflow-x:scroll;
+	width:auto;
+	height:500px;
+	border:'2'; 
+}
 
 
