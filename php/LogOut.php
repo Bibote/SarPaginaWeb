@@ -5,6 +5,5 @@ session_destroy();
 
 ?>
 <script languaje='javascript'> 
-alert('Hasta pronto');
 location.href='Layout.php';
 </script>
