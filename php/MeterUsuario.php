@@ -3,6 +3,13 @@
 <html>
 <head>
   <?php include '../html/Head.html'?>
+  <style type="text/css">
+			body{
+				background-image: url(fondoregistro.png);
+        text-align:center;
+				
+				}
+  </style>
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
@@ -61,17 +68,23 @@
                  (email,nombre,contraseña,foto) VALUES ('$email','$nombre','$encriptada','$foto')";
               if (!mysqli_query($link, $sql2)){
                 mysqli_close($link);
-                echo "<span style='color:red'>Se ha producido algun error, vuelve a intentarlo</span>";
+                echo '<script type="text/javascript">
+                alert("Se ha producido un error vuelve a intentarlo.");
+                </script>';
                echo "<a href='javascript:history.back();'>Atrás</a>";
              }else{
                mysqli_close($link);
-                echo "<span style='color:blue'>Usuario creado</span>";
+                echo '<script type="text/javascript">
+                alert("Usuario guardado con éxito.");
+                </script>';
+                //<span style='color:blue'>Usuario creado</span>";
               }
             }
               else{
                 mysqli_close($link);
-                echo "<span style='color:red'>Este usuario ya existe</span>";
-
+                echo '<script type="text/javascript">
+                alert("Este usuario ya existe.");
+                </script>';
                }
             }
         

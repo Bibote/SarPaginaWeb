@@ -18,7 +18,7 @@
         <label for="password2">Repetir contraseña*:</label> 
         <input type="password" id="password2" name="password2" ><br>
         <label for="foto">Foto</label>
-        <input type="file" accept="image/*" name="foto" onchange='loadFile(event)'<br>
+        <input type="file" accept="image/*" name="foto" onchange='loadFile(event)'><br>
       <input type="submit" id="enviar" name="enviar"><br>
     </form>
       <script>

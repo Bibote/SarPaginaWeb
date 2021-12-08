@@ -3,6 +3,15 @@
 <head>
 <?php include '../html/Head.html'?>
 <title> mostrar tabla xml</title>
+<style type="text/css">
+			body{
+				background-image: url(fondoregistro.png);
+        
+       
+        text-align: center;
+				
+				}
+</style>
 </head>
 <body>  
 <?php include '../php/DbConfig.php' ?>
@@ -22,6 +31,7 @@ $xml = simplexml_load_file('../xml/Recetas.xml');
         <td>Proteina</td>
         <td>Grasa</td>
         <td>Carbohidratos</td>
+        <td>Ver Receta</td>
     </tr>
 <?php
 foreach($xml->children() as $pedidos){
@@ -47,6 +57,7 @@ foreach($xml->children() as $pedidos){
             $carb=$child;
         }
     }
+    $id=$att['id']
         
     ?>
 <tr>
@@ -56,6 +67,7 @@ foreach($xml->children() as $pedidos){
     <td><?php echo $proteina;?></td>
     <td><?php echo $grasa;?></td>
     <td><?php echo $carb;?></td>
+    <td><center><input type='button' value='Ver Receta' onclick="verReceta('<?php echo $id ?>')")></td> 
     
 
 </tr>
@@ -64,6 +76,7 @@ foreach($xml->children() as $pedidos){
 } ?>
 </table>
 </div id=receta-table>
+<script src="../js/VerReceta.js"></script>
 </div>
 </section>
 </body>

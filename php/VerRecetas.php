@@ -2,6 +2,15 @@
 <html>
 <head>
   <?php include '../html/Head.html'?>
+  <style type="text/css">
+			body{
+				background-image: url(fondoregistro.png);
+        
+       
+        text-align: center;
+				
+				}
+        </style>
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
@@ -46,7 +55,8 @@ $datos = json_decode( file_get_contents('https://api.spoonacular.com/recipes/fin
                 ";
                 echo"<td>"; 
                 ?>
-                 <center><input type='button' value='Guardar' onclick="guardar('<?php echo $id?>','<?php echo $nombre?>','<?php echo $calorias?>','<?php echo $fotoReceta?>','<?php echo $proteina?>','<?php echo $grasa?>','<?php echo $carbs?>')">
+                  <center><input type='button' value='Guardar' onclick="guardar('<?php echo $id?>','<?php echo $nombre?>','<?php echo $calorias?>','<?php echo $fotoReceta?>','<?php echo $proteina?>','<?php echo $grasa?>','<?php echo $carbs?>')"> 
+                 
                  <?php
         echo" </td>";
                 

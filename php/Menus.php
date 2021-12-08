@@ -28,12 +28,13 @@
   
   echo "<header class='main' id='h1'>";
       if (!isset($_SESSION['nombre'])){
-        echo "<span class='right' style=display:inline><a href='Registro.php'>Registro</a></span>
-        <span class='right' style=display:inline><a href='LogIn.php'>Login</a></span>
-
+        echo "
+          
         </header>
       <nav class='main' id='n1' role='navigation'>
         <span><a href='Layout.php'>Inicio</a></span>
+        <span class='main'><a href='Registro.php'>Registro</a></span>
+        <span class='main'><a href='LogIn.php'>Login</a></span>
 
       </nav>";
       }else{
