@@ -2,10 +2,11 @@
 <html>
 <head>
 <?php include '../html/Head.html'?>
+
 <title> mostrar tabla xml</title>
 <style type="text/css">
 			body{
-				background-image: url(fondoregistro.png);
+				background-image: url(../images/fondoregistro.png);
         
        
         text-align: center;
@@ -16,6 +17,7 @@
 <body>  
 <?php include '../php/DbConfig.php' ?>
 <?php include '../php/Menus.php' ?>
+<?php include 'Seguridad.php'?>
 
 <section class="main" id="s1">
 <div>
@@ -23,7 +25,7 @@
 $xml = simplexml_load_file('../xml/Recetas.xml');
 ?>
 <div id=receta-table>
- <center><table bgcolor='AFEEEE' border='2'>
+ <center><table bgcolor='beige' border='2'>
     <tr>
         <td>Nombre de la receta</td>
         <td>Calorias</td>

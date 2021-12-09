@@ -4,7 +4,7 @@
   <?php include '../html/Head.html'?>
   <style type="text/css">
 			body{
-				background-image: url(fondoregistro.png);
+				background-image: url(../images/fondoregistro.png);
         text-align: center;
        
 
@@ -14,11 +14,11 @@
 				margin: auto;
 				width: 50%;
 				max-width: 500px;
-				background-color: white;
+				background-color: beige;
 				padding: 20px;
 				border: 1px solid rgba(0,0,0,0.2);
 				font-size: 25px;
-        font-family: "Times New Roman",Helvetica,sans-serif;
+        font-family:"Arial", Helvetica, sans-serif;
         display:inline-block;
         font-weight: bold;
       
@@ -37,9 +37,9 @@ font-size: 15px;
 
 input[type="submit"] {
 
-background: linear-gradient(red,white);
+background: linear-gradient(white,white);
 border:0;
-color: brown;
+color: black;
 opacity: 0.7;
 cursor: pointer;
 border-radius: 20px;
@@ -50,7 +50,7 @@ margin-bottom: 0;
 
 input[type="submit"]:hover {
 
-opacity: 1;
+opacity: 0.5;
 
 
 }
@@ -59,11 +59,7 @@ input[type="submit"]:active {
 transform: scale(0.9);
 
 }
-
-
-			
-
-  </style>
+</style>
 </head>
 <body>
   <?php include '../php/Menus.php' ?>

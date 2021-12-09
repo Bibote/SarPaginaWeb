@@ -5,6 +5,7 @@
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
+  <?php include 'Seguridad.php'?>
   <section style="height: 1700px;" class="main" id="s1">
       
     <div>
