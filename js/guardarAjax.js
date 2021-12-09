@@ -8,3 +8,4 @@ function guardar(id, nombre,calorias, fotoReceta, proteina,grasas,carbs) {
 XMLHttp.open("GET","AddReceta.php?id="+id+"&&nombre="+nombre+"&&calorias="+calorias+"&&fotoReceta="+fotoReceta+"&&proteina="+proteina+"&&grasa="+grasas+"&&carbohidratos="+carbs, true);
 XMLHttp.send();  
 }
+//Funcion de Ajax para guardar recetas pasando los parametros mediante la url parametrizada 

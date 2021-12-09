@@ -22,6 +22,7 @@
 <section class="main" id="s1">
 <div>
 <?php
+//En este php se lee el xml y se buscan las recetas del usuario para mostrarle
 $xml = simplexml_load_file('../xml/Recetas.xml');
 ?>
 <div id=receta-table>
@@ -69,6 +70,7 @@ foreach($xml->children() as $pedidos){
     <td><?php echo $proteina;?></td>
     <td><?php echo $grasa;?></td>
     <td><?php echo $carb;?></td>
+    <!--Boton para usar el javaScript para ver la receta, se le pasara el id-->
     <td><center><input type='button' value='Ver Receta' onclick="verReceta('<?php echo $id ?>')")></td> 
     
 

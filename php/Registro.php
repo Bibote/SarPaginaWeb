@@ -69,7 +69,7 @@
   <section class="main" id="s1">
   
     <div>
-    <form id='signUp' name='signUp' method='POST' enctype="multipart/form-data" action="MeterUsuario.php">
+    <form id='signUp' name='signUp' method='POST' enctype="multipart/form-data" action="MeterUsuario.php"><!--Formulario para el registro, el enctype es para pasar la imagen de metodo POST-->
         <label for="email">Email*:</label> 
         <input type="email" id="email" name="email" require><br>
         <label for="nombre">Nombre*:</label> 
@@ -83,11 +83,11 @@
       <input type="submit" id="enviar" name="enviar"><br>
     </form>
       <script>
-      var loadFile = function(event) {
-        var output = document.getElementById('output');
-        output.src = URL.createObjectURL(event.target.files[0]);
+      var loadFile = function(event) {//Funcion en javaScript para previsualizar imagen
+        var output = document.getElementById('output');//Se guarda en la variable output el sitio donde se va a mostrar la imagen
+        output.src = URL.createObjectURL(event.target.files[0]);//Se crea una Url virtual para la imagen
         output.onload = function() {
-        URL.revokeObjectURL(output.src) // free memory
+        URL.revokeObjectURL(output.src) // Se borra la url virtual para guardar memoria
         }
       };
       </script>

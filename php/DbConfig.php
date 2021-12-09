@@ -1,5 +1,6 @@
 <?php
 $local=0; //0 para la nube
+//Informacion para conectarse con la base de datos
 if ($local==1){
     $server="localhost";
     $user="root";

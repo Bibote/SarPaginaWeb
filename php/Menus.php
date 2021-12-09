@@ -4,7 +4,7 @@
   $tipo='';
 
   echo "<div id='page-wrap'>";
-  if (isset($_SESSION['nombre'])){
+  if (isset($_SESSION['nombre'])){//Si se ha iniciado sesion se busca la foto del usuario y si no tiene se le asigna una de anonimo
     $usuario=($_SESSION['nombre']);
     $conn = mysqli_connect($server, $user, $pass, $basededatos);
 
@@ -27,7 +27,7 @@
   }
   
   echo "<header class='main' id='h1'>";
-      if (!isset($_SESSION['nombre'])){
+      if (!isset($_SESSION['nombre'])){//Si no hay sesion se muestra para registrarte y hacer Login
         echo "
           
         </header>
@@ -39,7 +39,7 @@
         <span class='main'><a href='LogIn.php'>Login</a></span>
 
       </nav>";
-      }else{
+      }else{//Si hay una sesion iniciada se muestra lo que puede hacer el usuario, su email y su foto
         echo "
         <span class='right' style=display:inline ><a><strong>$usuario</strong></a></span>
         

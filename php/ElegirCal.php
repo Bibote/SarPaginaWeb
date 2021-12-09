@@ -67,7 +67,7 @@ transform: scale(0.9);
   <section class="main" id="s1">
     <div>
       <h2>Seleccionar calorias de las recetas</h2>
-      <form id='buscador' name='buscador' method='POST' action='VerRecetas.php'>
+      <form id='buscador' name='buscador' method='POST' action='VerRecetas.php'><!--Formulario para elegir las calorias, se verifica mediante html5-->
         <label for="min">Min calorias* (min 0):</label> 
         <input type="number" id="min" name="min" min="0" max="2999" required ><br>
         <label for="max">Max calorias* (max 3000):</label> 

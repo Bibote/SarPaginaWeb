@@ -66,7 +66,7 @@ transform: scale(0.9);
   <?php include '../php/DbConfig.php' ?>
   <section class="main" id="s1">
     <div>
-    <form id='logIn' name='logIn' method='POST' enctype="multipart/form-data">
+    <form id='logIn' name='logIn' method='POST' enctype="multipart/form-data"><!--Formulario de Log in-->
         <label for="email">Email*:</label> 
         <input type="text" id="email" name="email" ><br>
         <label for="password">Contraseña*:</label> 
@@ -76,11 +76,11 @@ transform: scale(0.9);
 
       <?php
       
-      if(isset($_POST['enviar'])) {
+      if(isset($_POST['enviar'])) {//Revision de errores en php para verificar en el servidor
         $errores = '';
      
         $post = (isset($_POST['email']) && !empty($_POST['email'])) &&
-              (isset($_POST['password']) && !empty($_POST['password']));
+              (isset($_POST['password']) && !empty($_POST['password']));//Verifica que todo esta rellenado
 
 
         if ($post) {  
@@ -95,7 +95,7 @@ transform: scale(0.9);
         if(!$errores=='') {
           print($errores);
         }
-        else {
+        else {//Compara el usuario con el de la base de datos, y encripta la contraseña dada de la misma manera que se encripto para meterla en la base de datos para ver si coincide
           $link = mysqli_connect ($server, $user, $pass, $basededatos);
           $desencriptada = crypt($password,'encriptador');
           $sql1="SELECT * FROM UserSar WHERE email='$email' AND contraseña='$desencriptada'";
@@ -104,7 +104,7 @@ transform: scale(0.9);
           mysqli_close($link);
           if(mysqli_num_rows($result) > 0) {
             $usuario=mysqli_fetch_assoc($result);
-            $_SESSION['nombre']=$email;
+            $_SESSION['nombre']=$email; //Se crea un objeto de Sesion que guarda el email
             header('Location:Layout.php');
 
           }

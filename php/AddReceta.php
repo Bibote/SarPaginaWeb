@@ -1,5 +1,6 @@
 <?php
 session_start();
+//Aqui se añadira las recetas al xml y se notificara al usuario de que se ha guardado
 $xml = simplexml_load_file('../xml/Recetas.xml');
       $receta = $xml->addChild('Receta');
       $receta->addAttribute('owner',$_SESSION['nombre']);
