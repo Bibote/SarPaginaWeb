@@ -2,9 +2,10 @@
 <html>
 <head>
   <?php include '../html/Head.html'?>
+
   <style type="text/css">
 			body{
-				background-image: url(fondoregistro.png);
+				background-image: url(../images/fondoregistro.png);
         
        
         text-align: center;
@@ -13,6 +14,7 @@
         </style>
 </head>
 <body>
+<?php include 'Seguridad.php'?>
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
   <?php
@@ -26,7 +28,7 @@ $datos = json_decode( file_get_contents('https://api.spoonacular.com/recipes/fin
       else {
  
         echo "
-        <center><table bgcolor='AFEEEE' border='2'>
+        <center><table bgcolor='beige' border='2'>
         <tr>
           <td>Nombre de la receta</td>
           <td>Calorias</td>

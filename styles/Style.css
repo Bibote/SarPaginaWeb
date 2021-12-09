@@ -1,19 +1,21 @@
 @charset "utf-8";
 * 						{margin: 0; padding: 0;}
-body						{background-color: azure; font: 16px Georgia, serif;}
+body						{background-color: azure; font: 16px Georgia, serif; color: black;}
 
-#page-wrap				{margin: 2% auto; color: rgb(82, 169, 240);}
-#page-wrap >.main 		{border: 1px solid rgb(82, 169, 240); padding: 1%;
+#page-wrap				{margin: 2% auto; color: rgb(246, 248, 250);}
+#page-wrap >.main 		{border: 1px solid rgb(243, 247, 250); padding: 1%; 
 						 margin-bottom: 1px; color: black;}
 
 section > div				{padding: 5px;}
-header   {background-image: url(../images/recetas.jpeg); text-align: center;}
-nav      {background-image: url(../images/fondoregistro.jpeg); background-size: cover; text-align: center;
+header   { background-image :url(../images/fondoregistro.png ) ;text-align: center;}
+nav      {background-image: url(../images/fondoregistro.png); background-size: cover; text-align: center; 
 font-weight: bold;
+color: blanchedalmond;
 font-size: 25px;
-font-family: 'Times New Roman', Times, serif;
+font-family:"Comic Sans MS";
+
 margin-bottom: 25px;}
-section  {background-image: url(../images/fondoregistro.jpeg); background-size: cover; text-align: center;}
+section  {background-image: url(../images/fondoregistro.png); background-size: cover; text-align: center;}
 footer					{background: rgb(82, 169, 240); text-align: center;}
 nav span             				{ margin: 0px 5px 0px 0px;
 						width: 100%;
@@ -25,6 +27,9 @@ nav span             				{ margin: 0px 5px 0px 0px;
 	width:auto;
 	height:700px;
 	border:'2'; 
+	
 }
+
+
 
 

@@ -5,7 +5,7 @@
   <?php include '../html/Head.html'?>
   <style type="text/css">
 			body{
-				background-image: url(fondoregistro.png);
+				background-image: url(../images/fondoregistro.png);
         text-align:center;
 				
 				}
@@ -74,17 +74,20 @@
                echo "<a href='javascript:history.back();'>Atrás</a>";
              }else{
                mysqli_close($link);
-                echo '<script type="text/javascript">
-                alert("Usuario guardado con éxito.");
-                </script>';
-                //<span style='color:blue'>Usuario creado</span>";
+                echo "<script type='text/javascript'>
+                alert('Usuario guardado con éxito.');
+                location.href='LogIn.php';
+                </script>
+                ";
+ 
               }
             }
               else{
                 mysqli_close($link);
-                echo '<script type="text/javascript">
-                alert("Este usuario ya existe.");
-                </script>';
+                echo "<script type='text/javascript'>
+                alert('Este usuario ya existe.');
+                location.href='Registro.php';
+                </script>";
                }
             }
         
